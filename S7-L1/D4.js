@@ -70,7 +70,7 @@ const epify = function (string) {
 };
 
 console.log("Esercizio 5: " + epify(" Hello"));
-console.log("Esercizio 5: " + epify("Epicode is awsome"));
+console.log("Esercizio 5: " + epify("Epicode is awesome"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
