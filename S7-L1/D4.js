@@ -77,28 +77,62 @@ console.log("Esercizio 5: " + epify("Epicode is awesome"));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
+const check3and7 = function (n) {
+	return n % 3 === 0 || n % 7 === 0;
+};
+
+console.log("Esercizio 6: " + check3and7(21));
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const reverseString = function (string) {
+	let str = string.split("");
+	let strReverse = str.reverse();
+	let newArr = strReverse.join("");
+	return newArr;
+};
+
+console.log("Esercizio 7: " + reverseString("Epicode"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirst = function (string) {
+	let str = string.split(" ");
+	let strUpper = str.map((str) => str.charAt(0).toUpperCase() + str.slice(1));
+	return strUpper;
+};
+
+console.log("Esercizio 8: " + upperFirst("ciao a tutti"));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const cutString = function (string) {
+	let str = string.slice(1, -1);
+	return str;
+};
+
+console.log("Esercizio 9: " + cutString("Marco"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (n) {
+	let arrNum = [];
+
+	for (let i = 0; i < n; i++) {
+		let number = Math.floor(Math.random() * 11);
+		arrNum.push(number);
+	}
+	return arrNum;
+};
+
+console.log("Esercizio 10: " + giveMeRandom(10));
